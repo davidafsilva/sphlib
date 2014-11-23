@@ -1,4 +1,4 @@
-sphlib 3.0
+sphlib 3.0 [ ![Build Status for davidafsilva/sphlib](https://codeship.com/projects/949eb9d0-5572-0132-2adf-3a252cfd4760/status)](https://codeship.com/projects/49320)
 ==========
 
 Disclaimer
