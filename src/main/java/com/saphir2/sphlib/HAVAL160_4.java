@@ -9,7 +9,7 @@ package com.saphir2.sphlib;
  * ==========================(LICENSE BEGIN)============================
  *
  * Copyright (c) 2007-2010  Projet RNRT SAPHIR
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -17,10 +17,10 @@ package com.saphir2.sphlib;
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -32,29 +32,30 @@ package com.saphir2.sphlib;
  * ===========================(LICENSE END)=============================
  * </pre>
  *
- * @version   $Revision: 156 $
- * @author    Thomas Pornin &lt;thomas.pornin@cryptolog.com&gt;
+ * @author Thomas Pornin &lt;thomas.pornin@cryptolog.com&gt;
+ * @version $Revision: 156 $
  */
 
 public class HAVAL160_4 extends HAVALCore {
 
-	/**
-	 * Create the object.
-	 */
-	public HAVAL160_4()
-	{
-		super(160, 4);
-	}
+  /**
+   * Create the object.
+   */
+  public HAVAL160_4() {
+    super(160, 4);
+  }
 
-	/** @see Digest */
-	public int getDigestLength()
-	{
-		return 20;
-	}
+  /**
+   * @see Digest
+   */
+  public int getDigestLength() {
+    return 20;
+  }
 
-	/** @see Digest */
-	public Digest copy()
-	{
-		return copyState(new HAVAL160_4());
-	}
+  /**
+   * @see Digest
+   */
+  public Digest copy() {
+    return copyState(new HAVAL160_4());
+  }
 }

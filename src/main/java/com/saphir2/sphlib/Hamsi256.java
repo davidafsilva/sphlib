@@ -3,14 +3,13 @@
 package com.saphir2.sphlib;
 
 /**
- * <p>This class implements the Hamsi-256 digest algorithm under the
- * {@link Digest} API.</p>
+ * <p>This class implements the Hamsi-256 digest algorithm under the {@link Digest} API.</p>
  *
  * <pre>
  * ==========================(LICENSE BEGIN)============================
  *
  * Copyright (c) 2007-2010  Projet RNRT SAPHIR
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -18,10 +17,10 @@ package com.saphir2.sphlib;
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -33,40 +32,42 @@ package com.saphir2.sphlib;
  * ===========================(LICENSE END)=============================
  * </pre>
  *
- * @version   $Revision: 206 $
- * @author    Thomas Pornin &lt;thomas.pornin@cryptolog.com&gt;
+ * @author Thomas Pornin &lt;thomas.pornin@cryptolog.com&gt;
+ * @version $Revision: 206 $
  */
 
 public class Hamsi256 extends HamsiSmallCore {
 
-	/**
-	 * Create the engine.
-	 */
-	public Hamsi256()
-	{
-		super();
-	}
+  private static final int[] IV = {
+      0x76657273, 0x69746569, 0x74204c65, 0x7576656e,
+      0x2c204465, 0x70617274, 0x656d656e, 0x7420456c
+  };
 
-	/** @see Digest */
-	public int getDigestLength()
-	{
-		return 32;
-	}
+  /**
+   * Create the engine.
+   */
+  public Hamsi256() {
+    super();
+  }
 
-	private static final int[] IV = {
-		0x76657273, 0x69746569, 0x74204c65, 0x7576656e,
-		0x2c204465, 0x70617274, 0x656d656e, 0x7420456c
-	};
+  /**
+   * @see Digest
+   */
+  public int getDigestLength() {
+    return 32;
+  }
 
-	/** @see HamsiSmallCore */
-	int[] getIV()
-	{
-		return IV;
-	}
+  /**
+   * @see HamsiSmallCore
+   */
+  int[] getIV() {
+    return IV;
+  }
 
-	/** @see HamsiSmallCore */
-	HamsiSmallCore dup()
-	{
-		return new Hamsi256();
-	}
+  /**
+   * @see HamsiSmallCore
+   */
+  HamsiSmallCore dup() {
+    return new Hamsi256();
+  }
 }
