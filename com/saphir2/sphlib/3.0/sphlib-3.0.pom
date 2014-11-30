@@ -81,7 +81,7 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>${site.maven.version}</version>
                 <configuration>
-                    <message>Maven artifacts for ${project.version}</message>
+                    <message>Maven artifacts for ${project.version} [skip ci]</message>
                     <!-- git commit message -->
                     <noJekyll>true</noJekyll>
                     <!-- disable web-page processing -->
