@@ -7,13 +7,30 @@ This repository is a fork of jnorthrup/sphlib, which is based on the source code
 to download at http://www.saphir2.com/sphlib/.
 I am not the author of the original code.
 
+Import
+========
+In order to import the library, either build and install it on your own repository, or simply add
+the following repository definition to your project configuration file:
+```xml
+    <repositories>
+        <repository>
+            <id>sphlib-mvn-repo</id>
+            <url>https://raw.github.com/davidafsilva/sphlib/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+```
+
+
 Overview
 ========
 
 Sphlib is a set of implementations of various hash functions, both in C
 and in Java. In particular this repository holds a fork of the Java code.
 The implementation is somewhat similar to that of java.security.MessageDigest.
-
 
 License
 =======
